@@ -1,4 +1,4 @@
-package com.startupkv.androidApp.android
+package com.example.startupkv.android
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,8 +8,8 @@ import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.startupkv.androidApp.Greeting
-import com.startupkv.androidApp.PostsService
+import com.example.startupkv.Greeting
+import com.example.startupkv.PostsService
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {

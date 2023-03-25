@@ -1,4 +1,4 @@
-package com.startupkv.androidApp
+package com.example.startupkv
 
 import platform.UIKit.UIDevice
 

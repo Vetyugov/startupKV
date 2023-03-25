@@ -13,15 +13,26 @@ extension ContentView {
     class ViewModel: ObservableObject {
         @Published var text = "Loading..."
         init() {
-            Greeting().greeting { greeting, error in
+            class ViewModel: ObservableObject {
+                @Published var text = "Loading..."
+                init() {
+                    PostsService().getPosts { getPosts, error in
                         DispatchQueue.main.async {
-                            if let greeting = greeting {
-                                self.text = greeting
+                            if let getPosts = getPosts {
+                                self.text = getPosts
                             } else {
                                 self.text = error?.localizedDescription ?? "error"
                             }
                         }
                     }
+                }
+            }
         }
     }
+}
+
+struct ContentView_Previews: PreviewProvider {
+	static var previews: some View {
+        ContentView(viewModel: ContentView.ViewModel())
+	}
 }

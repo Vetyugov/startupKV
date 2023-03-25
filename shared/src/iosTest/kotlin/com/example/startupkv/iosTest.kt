@@ -1,4 +1,4 @@
-package com.startupkv.androidApp
+package com.example.startupkv
 
 import kotlin.test.Test
 import kotlin.test.assertTrue

@@ -1,4 +1,4 @@
-package com.startupkv.androidApp
+package com.example.startupkv
 
 import com.startupkv.androidApp.dto.PostRs
 import io.ktor.client.*
@@ -20,14 +20,18 @@ class PostsService {
     }
 
     @Throws(Exception::class)
-    suspend fun getPosts(): List<PostRs>{
+    suspend fun getPosts(): String{
         //Запрос в SpaceX для получения списка запусков
         println("Получение списка всех постов")
         val posts: List<PostRs> =
             httpClient.get("http://192.168.31.200:8190/KV/post").body()
         println("Получены посты:$posts")
-        return posts;
+        return posts.toString();
     }
+
+//    fun postsToString (): String {
+//        return getPosts().toString();
+//    }
 
 
 }

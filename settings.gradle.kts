@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "startupKV"
+rootProject.name = "StartupKV"
 include(":androidApp")
 include(":shared")

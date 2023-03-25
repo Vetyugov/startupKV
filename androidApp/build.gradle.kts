@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.startupkv.androidApp.android"
+    namespace = "com.example.startupkv.android"
     compileSdk = 33
     defaultConfig {
-        applicationId = "com.startupkv.androidApp.android"
-        minSdk = 28
+        applicationId = "com.example.startupkv.android"
+        minSdk = 24
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -46,5 +46,4 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:1.3.1")
     implementation("androidx.compose.material:material:1.3.1")
     implementation("androidx.activity:activity-compose:1.6.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
 }

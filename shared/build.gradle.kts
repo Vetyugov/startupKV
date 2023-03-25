@@ -1,10 +1,7 @@
 plugins {
     kotlin("multiplatform")
-    //Для работы с JSON-ами
-    kotlin("plugin.serialization") version "1.8.10"
     id("com.android.library")
 }
-
 
 kotlin {
     android {
@@ -14,7 +11,7 @@ kotlin {
             }
         }
     }
-
+    
     listOf(
         iosX64(),
         iosArm64(),
@@ -26,7 +23,6 @@ kotlin {
     }
 
     val ktorVersion = "2.2.1"
-
 
     sourceSets {
         val commonMain by getting {
@@ -43,6 +39,7 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
+
             }
         }
         val androidMain by getting {
@@ -60,7 +57,7 @@ kotlin {
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
-            dependencies{
+            dependencies {
                 implementation("io.ktor:ktor-client-darwin:$ktorVersion")
             }
         }
@@ -77,10 +74,10 @@ kotlin {
 }
 
 android {
-    namespace = "com.startupkv.androidApp"
+    namespace = "com.example.startupkv"
     compileSdk = 33
     defaultConfig {
-        minSdk = 28
+        minSdk = 24
         targetSdk = 33
     }
 }
